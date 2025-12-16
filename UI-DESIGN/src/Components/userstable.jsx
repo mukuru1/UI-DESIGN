@@ -33,3 +33,20 @@ export default function UsersTable() {
               <th className="text-left px-6 py-3 text-sm font-medium text-gray-500">Actions</th>
             </tr>
           </thead>
+
+          <tbody className="divide-y divide-gray-100">
+            {users.map((user) => (
+              <tr key={user.email} className="hover:bg-gray-50">
+                <td className="px-6 py-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
+                      <span className="text-primary-600 font-medium">
+                        {user.name.split(' ').map(n => n[0]).join('')}
+                      </span>
+                    </div>
+                    <div>
+                      <p className="font-medium text-gray-800">{user.name}</p>
+                      <p className="text-sm text-gray-500">{user.email}</p>
+                    </div>
+                  </div>
+                </td>
