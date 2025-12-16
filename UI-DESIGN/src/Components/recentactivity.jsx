@@ -4,7 +4,7 @@ const activities = [
     description: 'MacBook Pro 16" M3 (PROD2024001)',
     date: 'Dec 4, 2024'
   },
-  
+
 
   { 
     title: 'Product assigned to Sarah Johnson',
@@ -12,3 +12,15 @@ const activities = [
     date: 'Dec 3, 2024'
   },
 
+ { 
+    title: 'Product assigned to Michael Brown',
+    description: 'Apple MacBook Air M2 (PROD2024001)',
+    date: 'Dec 2, 2024'
+  },
+
+  
+  { 
+    title: 'Product sent for maintenance',
+    description: 'HP Spectre x360 - Screen replacement required',
+    date: 'Jan 16, 2024'
+  },
