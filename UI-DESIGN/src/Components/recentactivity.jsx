@@ -1,3 +1,5 @@
+import React from 'react'
+
 const activities = [
   { 
     title: 'Product added to inventory',
@@ -18,9 +20,16 @@ const activities = [
     date: 'Dec 2, 2024'
   },
 
-  
+
   { 
     title: 'Product sent for maintenance',
     description: 'HP Spectre x360 - Screen replacement required',
     date: 'Jan 16, 2024'
   },
+
+  { 
+    title: 'New user registered',
+    description: 'Amanda White - Staff Member',
+    date: 'Jan 14, 2024'
+  },
+]
