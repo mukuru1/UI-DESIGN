@@ -8,6 +8,14 @@ export default function StatsCard({ title, value, color }) {
     orange: 'bg-orange-50 border-orange-200',
   }
 
+  const valueColors = {
+    blue: 'text-primary-600',
+    green: 'text-green-600',
+    purple: 'text-purple-600',
+    orange: 'text-orange-600',
+  }
+
+
   return (
       
   )
