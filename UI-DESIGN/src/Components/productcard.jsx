@@ -7,5 +7,19 @@ export default function ProductCard({ name, category, date, status }) {
     'Out of Stock': 'bg-red-100 text-red-700',
   }
 
-    return
-    <div className="border rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200">
+    return (
+
+        <div className="bg-gray-50 rounded-xl p-4 flex justify-between items-start">
+      <div>
+        <h4 className="font-semibold text-gray-800">{name}</h4>
+        <p className="text-sm text-gray-500">{category}</p>
+        <p className="text-sm text-gray-400 mt-1">{date}</p>
+      </div>
+      <span className={`px-3 py-1 rounded-full text-xs font-medium ${statusStyles[status]}`}>
+        {status}
+      </span>
+    </div>
+
+    )
+    
+}
