@@ -44,3 +44,17 @@ export default function Dashboard() {
           All Systems Operational
         </div>
       </div>
+
+      <div className="grid grid-cols-4 gap-4 mb-6">
+        {stats.map((stat) => (
+          <StatsCard key={stat.title} {...stat} />
+        ))}
+      </div>
+
+      <div className="bg-white rounded-xl p-6 mb-6 shadow-sm">
+        <h3 className="text-lg font-semibold text-gray-800 mb-4">Recent Added Products</h3>
+        <div className="grid grid-cols-3 gap-4">
+          {products.slice(0, 3).map((product) => (
+            <ProductCard key={product.name} {...product} />
+          ))}
+        </div>
