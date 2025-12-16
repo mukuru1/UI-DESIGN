@@ -12,3 +12,13 @@ const users = [
   { name: 'Christopher Lee', email: 'c.lee@ihuza.com', role: 'Admin', status: 'Active', lastLogin: '1 hour ago' },
   { name: 'Amanda White', email: 'a.white@ihuza.com', role: 'Staff', status: 'Inactive', lastLogin: '1 week ago' },
 ]
+
+export default function UsersTable() {
+  return (
+    <div className="bg-white rounded-xl shadow-sm">
+      <div className="flex justify-between items-center p-6 border-b">
+        <h3 className="text-lg font-semibold text-gray-800">Users</h3>
+        <button className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors">
+          Add User
+        </button>
+      </div>
