@@ -35,3 +35,12 @@ export default function Dashboard() {
           </div>
         </div>
       </header>
+
+      <div className="bg-white rounded-xl p-6 mb-6 shadow-sm">
+        <h2 className="text-lg font-semibold text-primary-600 mb-2">iHUZA INVENTORY - System Overview</h2>
+        <p className="text-gray-600 mb-4">Monitor your iHUZA inventory and product assignments in real-time.</p>
+        <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm">
+          <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+          All Systems Operational
+        </div>
+      </div>
