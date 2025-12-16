@@ -61,3 +61,19 @@ export default function UsersTable() {
                     {user.status}
                   </span>
                 </td>
+
+                <td className="px-6 py-4 text-gray-500">{user.lastLogin}</td>
+                <td className="px-6 py-4">
+                  <div className="flex gap-2">
+                    <button className="text-primary-600 hover:text-primary-700 font-medium">Edit</button>
+                    <button className="text-red-600 hover:text-red-700 font-medium">Delete</button>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  )
+}
