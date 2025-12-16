@@ -58,3 +58,19 @@ export default function Dashboard() {
             <ProductCard key={product.name} {...product} />
           ))}
         </div>
+        <div className="grid grid-cols-2 gap-4 mt-4">
+          {products.slice(3).map((product) => (
+            <ProductCard key={product.name} {...product} />
+          ))}
+        </div>
+      </div>
+
+      <UsersTable />
+
+      <div className="grid grid-cols-2 gap-6 mt-6">
+        <RecentActivity />
+        <QuickActions />
+      </div>
+    </div>
+  )
+}
