@@ -50,3 +50,14 @@ export default function UsersTable() {
                     </div>
                   </div>
                 </td>
+
+                 <td className="px-6 py-4 text-gray-600">{user.role}</td>
+                <td className="px-6 py-4">
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                    user.status === 'Active' 
+                      ? 'bg-green-100 text-green-700' 
+                      : 'bg-gray-100 text-gray-600'
+                  }`}>
+                    {user.status}
+                  </span>
+                </td>
