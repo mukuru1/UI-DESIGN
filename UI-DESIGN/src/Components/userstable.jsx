@@ -22,3 +22,14 @@ export default function UsersTable() {
           Add User
         </button>
       </div>
+<div className="overflow-x-auto">
+        <table className="w-full">
+          <thead className="bg-gray-50">
+            <tr>
+              <th className="text-left px-6 py-3 text-sm font-medium text-gray-500">User</th>
+              <th className="text-left px-6 py-3 text-sm font-medium text-gray-500">Role</th>
+              <th className="text-left px-6 py-3 text-sm font-medium text-gray-500">Status</th>
+              <th className="text-left px-6 py-3 text-sm font-medium text-gray-500">Last Login</th>
+              <th className="text-left px-6 py-3 text-sm font-medium text-gray-500">Actions</th>
+            </tr>
+          </thead>
