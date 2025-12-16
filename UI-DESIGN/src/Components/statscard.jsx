@@ -17,5 +17,10 @@ export default function StatsCard({ title, value, color }) {
 
 
   return (
-      
+       <div className={`${colorStyles[color]} border rounded-xl p-6 text-center`}>
+      <p className={`text-4xl font-bold ${valueColors[color]}`}>{value}</p>
+      <p className="text-gray-600 mt-2">{title}</p>
+    </div>
   )
+
+}
