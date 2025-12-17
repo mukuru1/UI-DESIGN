@@ -8,18 +8,16 @@ const actions = [
 
 export default function QuickActions() {
   return (
-    <div className="bg-white rounded-xl p-6 shadow-sm">
-      <h3 className="text-lg font-semibold text-gray-800 mb-4">Quick Actions</h3>
-      <div className="space-y-3">
+    <div className="card">
+      <h3 style={{margin:0,fontWeight:700,marginBottom:12}}>Quick Actions</h3>
+      <div style={{display:'grid',gap:10}}>
         {actions.map((action) => (
-          <div key={action.title} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+          <div key={action.title} style={{display:'flex',justifyContent:'space-between',alignItems:'center',padding:12,background:'#fbfbfd',borderRadius:8}}>
             <div>
-              <p className="font-medium text-gray-800">{action.title}</p>
-              <p className="text-sm text-gray-500">{action.description}</p>
+              <div style={{fontWeight:600}}>{action.title}</div>
+              <div style={{color:'var(--muted)',fontSize:13}}>{action.description}</div>
             </div>
-            <button className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors text-sm">
-              Go
-            </button>
+            <button className="small-btn">Go</button>
           </div>
         ))}
       </div>

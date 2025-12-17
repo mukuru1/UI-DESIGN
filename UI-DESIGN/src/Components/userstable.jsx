@@ -15,58 +15,44 @@ const users = [
 
 export default function UsersTable() {
   return (
-    <div className="bg-white rounded-xl shadow-sm">
-      <div className="flex justify-between items-center p-6 border-b">
-        <h3 className="text-lg font-semibold text-gray-800">Users</h3>
-        <button className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors">
-          Add User
-        </button>
+    <div className="card">
+      <div className="card-header">
+        <h3 style={{margin:0,fontWeight:700}}>Users</h3>
+        <button className="small-btn">Add User</button>
       </div>
-<div className="overflow-x-auto">
-        <table className="w-full">
-          <thead className="bg-gray-50">
+
+      <div className="users-table">
+        <table>
+          <thead>
             <tr>
-              <th className="text-left px-6 py-3 text-sm font-medium text-gray-500">User</th>
-              <th className="text-left px-6 py-3 text-sm font-medium text-gray-500">Role</th>
-              <th className="text-left px-6 py-3 text-sm font-medium text-gray-500">Status</th>
-              <th className="text-left px-6 py-3 text-sm font-medium text-gray-500">Last Login</th>
-              <th className="text-left px-6 py-3 text-sm font-medium text-gray-500">Actions</th>
+              <th>User</th>
+              <th>Role</th>
+              <th>Status</th>
+              <th>Last Login</th>
+              <th>Actions</th>
             </tr>
           </thead>
-
-          <tbody className="divide-y divide-gray-100">
+          <tbody>
             {users.map((user) => (
-              <tr key={user.email} className="hover:bg-gray-50">
-                <td className="px-6 py-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
-                      <span className="text-primary-600 font-medium">
-                        {user.name.split(' ').map(n => n[0]).join('')}
-                      </span>
-                    </div>
+              <tr key={user.email}>
+                <td>
+                  <div style={{display:'flex',alignItems:'center',gap:12}}>
+                    <div className="avatar" aria-hidden>{user.name.split(' ').map(n=>n[0]).join('')}</div>
                     <div>
-                      <p className="font-medium text-gray-800">{user.name}</p>
-                      <p className="text-sm text-gray-500">{user.email}</p>
+                      <div style={{fontWeight:600}}>{user.name}</div>
+                      <div style={{color:'var(--muted)',fontSize:13}}>{user.email}</div>
                     </div>
                   </div>
                 </td>
-
-                 <td className="px-6 py-4 text-gray-600">{user.role}</td>
-                <td className="px-6 py-4">
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    user.status === 'Active' 
-                      ? 'bg-green-100 text-green-700' 
-                      : 'bg-gray-100 text-gray-600'
-                  }`}>
-                    {user.status}
-                  </span>
+                <td style={{color:'var(--muted)'}}>{user.role}</td>
+                <td>
+                  <span style={{padding:'6px 10px',borderRadius:20,background:user.status==='Active'?'#ecfdf5':'#f3f4f6',color:user.status==='Active'?'#047857':'#6b7280',fontSize:12,fontWeight:600}}>{user.status}</span>
                 </td>
-
-                <td className="px-6 py-4 text-gray-500">{user.lastLogin}</td>
-                <td className="px-6 py-4">
-                  <div className="flex gap-2">
-                    <button className="text-primary-600 hover:text-primary-700 font-medium">Edit</button>
-                    <button className="text-red-600 hover:text-red-700 font-medium">Delete</button>
+                <td style={{color:'var(--muted)'}}>{user.lastLogin}</td>
+                <td>
+                  <div style={{display:'flex',gap:8}}>
+                    <button style={{background:'transparent',border:'none',color:'var(--primary-600)',cursor:'pointer'}}>Edit</button>
+                    <button style={{background:'transparent',border:'none',color:'#ef4444',cursor:'pointer'}}>Delete</button>
                   </div>
                 </td>
               </tr>
