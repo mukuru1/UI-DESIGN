@@ -1,11 +1,10 @@
 import React from 'react'
-import TopBar from './Components/topbar'
-import Header from './Components/quickactions'
-import StatCard from './Components/StatCard'
+import Topbar from './Components/topbar'
+import QuickActions from './Components/quickactions'
+import StatsCard from './Components/statscard'
 import ProductCard from './Components/productcard'
 import UsersTable from './Components/userstable'
-import SideBar from './Components/sidebar'
-import QuickActions from './Components/quickactions'
+import Sidebar from './Components/sidebar'
 
 export default function App(){
   const stats = [
@@ -27,7 +26,7 @@ export default function App(){
     <div className="min-h-screen flex">
       <Sidebar />
       <div className="flex-1 p-6 md:p-8 lg:p-10">
-        <Header />
+        <QuickActions />
         <main className="space-y-6">
           {/* Hero */}
           <div className="rounded-lg overflow-hidden">
@@ -53,7 +52,7 @@ export default function App(){
           {/* Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {stats.map((s,i)=>(
-              <StatCard key={i} icon={s.icon} label={s.label} value={s.value} />
+              <StatsCard key={i} label={s.label} value={s.value} />
             ))}
           </div>
 
